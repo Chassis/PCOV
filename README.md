@@ -9,3 +9,11 @@ A Chassis extension to install and configure PCOV on your Chassis server.
    ```
 2. Set your `config.local.yaml` PHP version to 7.1 or higher.
 3. Run `vagrant provision`.
+
+## 🚨 Remove Xdebug 🚨
+
+You'll need to remove Xdebug for PCOV to work. The easiest way to do this is to add this to one of your `.yaml` files:
+```yaml
+disabled_extensions:
+   - chassis/xdebug
+```
